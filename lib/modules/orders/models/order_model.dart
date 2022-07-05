@@ -14,6 +14,7 @@ class Order {
     required this.total,
     required this.qty,
     required this.color,
+    required this.imageOrder,
   });
   late final int id;
   late final String link;
@@ -30,6 +31,9 @@ class Order {
   late final int qty;
   late final String color;
   late final String deliveryTime;
+  late final String deliveryId;
+
+  late final String imageOrder;
 
   Order.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -47,6 +51,8 @@ class Order {
     qty = json['qty'];
     color = json['color'];
     deliveryTime = json['delivery_time'];
+    deliveryId = json['delivery_id'];
+    imageOrder = json['image_order'];
   }
 
   Map<String, dynamic> toJson() {

@@ -87,6 +87,7 @@ class OrderController extends GetxController {
     List<dynamic> orders =
         await DioHandler.apiHelper.getOrder(Get.locale.toString());
     allorders = orders.map((e) => Order.fromJson(e)).toList();
+    print(orders);
     update();
   }
 }

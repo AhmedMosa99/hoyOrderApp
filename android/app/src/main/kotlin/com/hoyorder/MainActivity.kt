@@ -1,4 +1,4 @@
-package com.example.hoyorder
+package com.hoyorder
 
 import io.flutter.embedding.android.FlutterActivity
 

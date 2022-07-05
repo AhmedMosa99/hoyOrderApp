@@ -39,20 +39,11 @@ class _SignUpState extends State<SignUp> {
                         child: Image.asset(
                       'assets/images/logo.jpg',
                       width: 150.w,
-                      height: 94.h,
+                      height: 120.h,
                     )),
                   ),
                   SizedBox(
                     height: 5.h,
-                  ),
-                  Center(
-                    child: Text(
-                      'HoY Order',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyText2!
-                          .copyWith(fontSize: 22.sp),
-                    ),
                   ),
                   SizedBox(
                     height: 28.h,

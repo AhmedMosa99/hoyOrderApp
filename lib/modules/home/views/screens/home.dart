@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   indicator: const BoxDecoration(color: Color(0xfffebd69)),
                   tabs: logic.allCategories
                       .map((e) => Padding(
-                            padding: EdgeInsets.only(top: 15.h),
+                            padding: EdgeInsets.only(top: 10.h),
                             child: Text(
                               e.name,
                               style: TextStyle(
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   color: Theme.of(context).primaryColor,
-                  height: 40.h,
+                  height: 55.h,
                   width: double.infinity,
                 ),
               ),

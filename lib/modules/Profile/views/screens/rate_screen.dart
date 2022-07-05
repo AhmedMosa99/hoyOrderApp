@@ -44,7 +44,7 @@ class RateScreen extends StatelessWidget {
                   height: 6.h,
                 ),
                 Text(
-                  'We want to thank you for using a site that came from you because it helps us always stand out'
+                  'We want to thank you for using a App that came from you because it helps us always stand out'
                       .tr,
                   textAlign: TextAlign.center,
                 ),

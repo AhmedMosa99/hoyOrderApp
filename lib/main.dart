@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       builder: (_) => GetMaterialApp(
           smartManagement: SmartManagement.keepFactory,
           translations: Messages(),
-          locale: Locale('ar'),
+          locale: Locale('en'),
           fallbackLocale: const Locale('en', 'Us'),
           initialBinding: Binding(),
           debugShowCheckedModeBanner: false,

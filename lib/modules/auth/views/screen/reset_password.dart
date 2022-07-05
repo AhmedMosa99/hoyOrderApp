@@ -31,17 +31,8 @@ class ResetPassword extends StatelessWidget {
                         child: Image.asset(
                       'assets/images/logo.jpg',
                       width: 150.w,
-                      height: 94.h,
+                      height: 120.h,
                     )),
-                  ),
-                  Center(
-                    child: Text(
-                      'HoY Order',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyText2!
-                          .copyWith(fontSize: 22.sp),
-                    ),
                   ),
                   SizedBox(
                     height: 38.h,

@@ -34,6 +34,7 @@ class _OrderWidgetState extends State<OrderWidget> {
                   borderRadius: BorderRadius.circular(12)),
               padding: EdgeInsets.all(8),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
                     decoration: BoxDecoration(
@@ -161,12 +162,33 @@ class _OrderWidgetState extends State<OrderWidget> {
                       Text(logic.allorders[index].total),
                     ],
                   ),
-                  logic.allorders[index].notes != ""
+                  logic.allorders[index].timeOffer != ""
                       ? SizedBox(
                           height: 10.h,
                         )
                       : Container(),
-                  logic.allorders[index].notes != ""
+                  logic.allorders[index].timeOffer != ""
+                      ? Row(
+                          children: [
+                            Text("delivery Time:".tr,
+                                style: TextStyle(
+                                    fontSize: 16.sp,
+                                    fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            Expanded(
+                                child:
+                                    Text(logic.allorders[index].deliveryTime)),
+                          ],
+                        )
+                      : Container(),
+                  logic.allorders[index].deliveryTime != ""
+                      ? SizedBox(
+                          height: 10.h,
+                        )
+                      : Container(),
+                  logic.allorders[index].deliveryTime != ""
                       ? Row(
                           children: [
                             Text("Duration Offer :".tr,
@@ -233,7 +255,60 @@ class _OrderWidgetState extends State<OrderWidget> {
                           ],
                         )
                       : Container(),
-                  //
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  logic.allorders[index].imageOrder != ""
+                      ? SizedBox(
+                          height: 48.h,
+                          child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blueGrey,
+                              ),
+                              onPressed: () async {
+                                Get.defaultDialog(
+                                  title: "",
+                                  content: SizedBox(
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                            decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius: BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(20.0),
+                                                    topRight:
+                                                        Radius.circular(20.0))),
+                                            child: Center(
+                                              child: Image.network(logic
+                                                  .allorders[index].imageOrder),
+                                            )),
+                                        SizedBox(
+                                          height: 10.h,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Invoice Number".tr,
+                                              style: TextStyle(
+                                                  fontSize: 16.sp,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                            Text(logic
+                                                .allorders[index].deliveryId)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Text("Invoice".tr)),
+                        )
+                      //
+                      : Container(),
                   SizedBox(
                     height: 10,
                   ),

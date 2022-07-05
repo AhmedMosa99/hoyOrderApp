@@ -22,11 +22,11 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   var controller = Get.put(MainController());
- var controller1 = Get.put(HomeController());
+  var controller1 = Get.put(HomeController());
   @override
   void initState() {
     controller.getCategory();
-   controller1.getPrice();
+    controller1.getPrice();
     Future.delayed(const Duration(seconds: 3), () {
       Get.off(userInfo == null ? LoginScreen() : MainScreen());
     });
@@ -49,13 +49,6 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 182.w,
               height: 160.h,
             ),
-            Text(
-              'HoY Order',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText2!
-                  .copyWith(fontSize: 22.sp),
-            )
           ],
         ),
       ),

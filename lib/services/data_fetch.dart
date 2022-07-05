@@ -146,9 +146,11 @@ class DioHandler {
           },
         ),
       );
+
       if ((response.statusCode!) <= 400) {
         responseData = (response.data)["data"];
       }
+      print(response.statusMessage);
     } catch (e) {
       throw Exception(e);
     }

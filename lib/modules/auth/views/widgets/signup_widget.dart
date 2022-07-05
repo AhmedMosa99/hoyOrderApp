@@ -93,8 +93,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                     type: TextInputType.number,
                     controller: controller.phoneControllerSignUp,
                     validate: (val) {
-                      if (val!.trim().isEmpty ||
-                          (!GetUtils.isPhoneNumber(val))) {
+                      if (val!.trim().isEmpty) {
                         return 'Enter a valid number'.tr;
                       }
                       return null;

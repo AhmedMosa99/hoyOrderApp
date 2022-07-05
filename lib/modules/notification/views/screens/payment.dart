@@ -207,7 +207,7 @@ class _PaymentState extends State<Payment> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            'Date :',
+                            'Date Information'.tr,
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyText2!
@@ -445,10 +445,15 @@ class _PaymentState extends State<Payment> {
                   height: 48.h,
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async {
+                      print(logic.id);
+                      File file = File(logic.photo!.path);
+                      await logic.takePhoto(logic.id, file);
+                      logic.isSend = true;
+
                       if (logic.isDone) {
-                        Get.snackbar("Done", "Complete Order");
                         Future.delayed(const Duration(seconds: 2), () {
+                          Get.snackbar("Done", "Complete Order");
                           Get.offAll(MainScreen());
                         });
                       }

@@ -62,19 +62,14 @@ class AuthController extends GetxController {
     required String email,
   }) async {
     if (keyRegister.currentState!.validate()) {
-      try {
-        final data = await DioHandler.apiHelper.fetchRegister(
-            '$countryCode$phone', password, email, name, Get.locale.toString());
-        await SharePref.setData(key: 'userInfo', data: json.encode(data));
-        final val = await SharePref.getData(key: 'userInfo');
-        userInfo = LoginModel.fromJson(json.decode(val));
-        var controller = Get.put(HomeController());
-        controller.conectPusher();
-        Get.offAll(() => MainScreen());
-      } catch (e) {
-        Get.snackbar('Sorry'.tr, e.toString());
-        throw Exception();
-      }
+      final data = await DioHandler.apiHelper.fetchRegister(
+          '$countryCode$phone', password, email, name, Get.locale.toString());
+      await SharePref.setData(key: 'userInfo', data: json.encode(data));
+      final val = await SharePref.getData(key: 'userInfo');
+      userInfo = LoginModel.fromJson(json.decode(val));
+      var controller = Get.put(HomeController());
+      controller.conectPusher();
+      Get.offAll(() => MainScreen());
     }
   }
 

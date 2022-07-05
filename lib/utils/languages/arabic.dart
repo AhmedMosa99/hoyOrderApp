@@ -17,7 +17,7 @@ Map<String, String> getArabic() {
     'Contact via email': "تواصل عبر الايميل",
     "Contact via Call": "تواصل عبر التلفون",
     "If you have problems using the site, please contact us through our accounts":
-        "في حالة وجود مشكلة الرجاء التواصل مع خدكة العملاء كم خلال قنوات التواصل",
+        "في حالة وجود مشكلة الرجاء التواصل مع خدمة العملاء من خلال قنوات التواصل",
     "Support Center": "مراكز الدعم",
     "send done": "تم الرفع بنجاح",
     "The password or number is incorrect.":
@@ -55,7 +55,7 @@ Map<String, String> getArabic() {
     "Quantity": "الكمية",
     "Confim": "تاكيد",
     "Buy by Link ": "شراء عبر الرابط",
-    "To Pay by bank": "لدفع بنك :",
+    "To Pay by bank": " تحويل بنك :",
     "Please attach the bank transfer logo": "الرجاء ارفاق اشعار التحويل",
     "Date Information": "معلومات التاريخ",
     "Time :": " الوقت:",
@@ -69,17 +69,20 @@ Map<String, String> getArabic() {
     "Total :": "المجموع :",
     "Notes :": "مراجعة الطلب : ",
     "Color: ": "اللون : ",
-    "Duration Offer :": "مدة سريان العرض",
+    "Duration Offer :": "مدة سريان العرض:",
     "Product Price:": "سعر المنتج :",
-    "Order Review :": "مراجعة الطلب",
+    "Order Review :": "مراجعة الطلب:",
     "Pay Order": "ادفع الان",
     "Cancel Order": "إلغاء الطلب",
     "Thank you": " شكرا لك",
     "Your request is being processed": " تم استلام الطلب قيد المعالجه",
     "Ok": "حسنا",
-    "'We want to thank you for using a site that came from you because it helps us always stand out',":
+    "We want to thank you for using a App that came from you because it helps us always stand out,":
         "شكرا لك لاستخدام تطبيق هوي اوردر ",
     "rate us": "التقيم",
-    "Leave a comment here": "المقترحات"
+    "Leave a comment here": "المقترحات",
+    "delivery Time:": "مدة التوصيل:",
+    "Invoice": "فاتورة",
+    "Invoice Number": "رقم الفاتورة"
   };
 }
